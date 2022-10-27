@@ -75,7 +75,7 @@ p {
         font-size: 1.5em;
         font-weight: 900;
         margin-bottom: 20px;
-
+        color: hsl(223, 47%, 23%);
         //   Desktop
         @media only screen and (min-width: 426px) {
           font-size: 1.6em;
@@ -115,11 +115,11 @@ p {
           &-title {
             font-size: 1em;
             text-align: left;
-
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            color: hsl(223, 47%, 23%);
           }
 
           &-titleName {
@@ -137,8 +137,10 @@ p {
           padding-right: 20px;
           width: 40%;
           text-decoration: underline;
-          color: hsl(245, 75%, 52%);
 
+          a {
+            color: hsl(245, 75%, 52%);
+          }
           a:hover {
             color: $hoverColor;
           }

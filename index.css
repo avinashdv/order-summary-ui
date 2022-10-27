@@ -66,6 +66,7 @@ p {
   font-size: 1.5em;
   font-weight: 900;
   margin-bottom: 20px;
+  color: hsl(223deg, 47%, 23%);
 }
 @media only screen and (min-width: 426px) {
   .orderSummary__card-details--heading {
@@ -110,6 +111,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: hsl(223deg, 47%, 23%);
 }
 .orderSummary__card-details__plan__about-titleName {
   font-weight: 900;
@@ -126,6 +128,8 @@ p {
   padding-right: 20px;
   width: 40%;
   text-decoration: underline;
+}
+.orderSummary__card-details__plan__edit a {
   color: hsl(245deg, 75%, 52%);
 }
 .orderSummary__card-details__plan__edit a:hover {
