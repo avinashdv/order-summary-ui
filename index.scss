@@ -1,0 +1,176 @@
+$hoverColor: hsla(245, 75%, 52%, 0.8);
+$fontFamily: "Red Hat Display", sans-serif;
+
+@mixin flexDisplayAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin setWidthAndHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+html,
+body {
+  @include setWidthAndHeight(100%, 100%);
+  margin: 0;
+  background-color: #e1e9ff;
+  font-family: $fontFamily;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.orderSummary {
+  @include flexDisplayAlignCenter;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  &__bg {
+    position: absolute;
+    top: -13%;
+    @include setWidthAndHeight(100%, 60%);
+    background-image: url(./assets/images/pattern-background-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  &__card {
+    @include setWidthAndHeight(440px, auto);
+    width: 340px;
+    height: auto;
+    background-color: white;
+    border-radius: 14px;
+    z-index: 2;
+    box-shadow: 0px 50px 40px -18px #cbd5f4;
+
+    //   Desktop
+    @media only screen and (min-width: 426px) {
+      width: 440px;
+    }
+
+    &-img {
+      @include setWidthAndHeight(100%, 30%);
+      border-radius: inherit;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &-details {
+      padding: 34px 18px;
+      box-sizing: border-box;
+      height: 70%;
+
+      //   Desktop
+      @media only screen and (min-width: 426px) {
+        padding: 40px;
+      }
+
+      &--heading {
+        font-size: 1.5em;
+        font-weight: 900;
+        margin-bottom: 20px;
+
+        //   Desktop
+        @media only screen and (min-width: 426px) {
+          font-size: 1.6em;
+        }
+      }
+
+      &--description {
+        font-size: 1em;
+        font-weight: bold;
+        margin-bottom: 18px;
+        font-weight: 500;
+        color: hsl(224, 23%, 55%);
+      }
+
+      &__plan {
+        display: flex;
+        justify-content: space-between;
+        background-color: hsl(225deg, 100%, 98%);
+        border-radius: 8px;
+        margin-bottom: 30px;
+        padding: 20px 10px;
+
+        //   Desktop
+        @media only screen and (min-width: 426px) {
+          padding: 20px 0;
+          margin-bottom: 40px;
+        }
+
+        &__about {
+          @include flexDisplayAlignCenter;
+          justify-content: space-evenly;
+          width: 60%;
+          &-img {
+            @include setWidthAndHeight(50px, 50px);
+          }
+
+          &-title {
+            font-size: 1em;
+            text-align: left;
+
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          &-titleName {
+            font-weight: 900;
+          }
+          &-titlePrice {
+            font-weight: 500;
+            color: hsl(224, 23%, 55%);
+          }
+        }
+        &__edit {
+          @include flexDisplayAlignCenter;
+          justify-content: flex-end;
+          cursor: pointer;
+          padding-right: 20px;
+          width: 40%;
+          text-decoration: underline;
+          color: hsl(245, 75%, 52%);
+
+          a:hover {
+            color: $hoverColor;
+          }
+        }
+      }
+
+      &__paymentButton {
+        cursor: pointer;
+        font-family: $fontFamily;
+        font-weight: 700;
+        font-size: 0.9em;
+        width: 100%;
+        border: 0;
+        color: white;
+        padding: 14px;
+        border-radius: 12px;
+        background-color: hsl(245, 75%, 52%);
+        margin-bottom: 28px;
+        box-shadow: 0px 12px 14px -1px #dcd7ff;
+
+        &:hover {
+          background-color: $hoverColor;
+        }
+      }
+
+      &__cancel {
+        cursor: pointer;
+        font-size: 0.9em;
+        font-weight: 600;
+        color: hsl(224, 23%, 55%);
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #e1e9ff;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.orderSummary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+.orderSummary__bg {
+  position: absolute;
+  top: -13%;
+  width: 100%;
+  height: 60%;
+  background-image: url(./assets/images/pattern-background-desktop.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.orderSummary__card {
+  width: 440px;
+  height: auto;
+  width: 340px;
+  height: auto;
+  background-color: white;
+  border-radius: 14px;
+  z-index: 2;
+  box-shadow: 0px 50px 40px -18px #cbd5f4;
+}
+@media only screen and (min-width: 426px) {
+  .orderSummary__card {
+    width: 440px;
+  }
+}
+.orderSummary__card-img {
+  width: 100%;
+  height: 30%;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.orderSummary__card-details {
+  padding: 34px 18px;
+  box-sizing: border-box;
+  height: 70%;
+}
+@media only screen and (min-width: 426px) {
+  .orderSummary__card-details {
+    padding: 40px;
+  }
+}
+.orderSummary__card-details--heading {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 426px) {
+  .orderSummary__card-details--heading {
+    font-size: 1.6em;
+  }
+}
+.orderSummary__card-details--description {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 18px;
+  font-weight: 500;
+  color: hsl(224deg, 23%, 55%);
+}
+.orderSummary__card-details__plan {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 8px;
+  margin-bottom: 30px;
+  padding: 20px 10px;
+}
+@media only screen and (min-width: 426px) {
+  .orderSummary__card-details__plan {
+    padding: 20px 0;
+    margin-bottom: 40px;
+  }
+}
+.orderSummary__card-details__plan__about {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+}
+.orderSummary__card-details__plan__about-img {
+  width: 50px;
+  height: 50px;
+}
+.orderSummary__card-details__plan__about-title {
+  font-size: 1em;
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.orderSummary__card-details__plan__about-titleName {
+  font-weight: 900;
+}
+.orderSummary__card-details__plan__about-titlePrice {
+  font-weight: 500;
+  color: hsl(224deg, 23%, 55%);
+}
+.orderSummary__card-details__plan__edit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding-right: 20px;
+  width: 40%;
+  text-decoration: underline;
+  color: hsl(245deg, 75%, 52%);
+}
+.orderSummary__card-details__plan__edit a:hover {
+  color: hsla(245deg, 75%, 52%, 0.8);
+}
+.orderSummary__card-details__paymentButton {
+  cursor: pointer;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+  width: 100%;
+  border: 0;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: hsl(245deg, 75%, 52%);
+  margin-bottom: 28px;
+  box-shadow: 0px 12px 14px -1px #dcd7ff;
+}
+.orderSummary__card-details__paymentButton:hover {
+  background-color: hsla(245deg, 75%, 52%, 0.8);
+}
+.orderSummary__card-details__cancel {
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: hsl(224deg, 23%, 55%);
+  text-decoration: none;
+}/*# sourceMappingURL=index.css.map */
